@@ -1,0 +1,145 @@
+---
+title: "Jaynius"
+description: |
+  How the complexity of Jay Z's lyrics evolved over his career.
+author:
+  - name: Evan Fradkin
+    url: https://example.com/norajones
+date: 12-14-2020
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+## Intro 
+
+For my first post I wanted to do something fun and simple. Jay Z recently turned 50 and in celebration of this momentous event he re-released his entire discography on Spotify (of which I am a subscriber). Needless to say, I have have been listening to a lot of Jay since the re-release. I always enjoyed the track [Moment of Clarity](https://genius.com/Jay-z-moment-of-clarity-lyrics) in which Jay Z takes stock of his life and career, and in particular, how he modified his lyrics to achieve further commercial success. This change in marketing strategy is best encapsulated in the quote below from the track Moment of Clarity
+
+>I dumbed down for my audience to double my dollars\  
+>\
+>They criticized me for it, yet they all yell holla
+>\
+>If skills sold, truth be told, I'd probably be lyrically Talib Kweli
+>\
+>Truthfully I wanna rhyme like Common Sense
+>\
+>But I did 5 mill' – I ain't been rhyming like Common since (Whoo)
+
+Essentially, Jay Z is describing how he simplified his lyrics to sell more albums. He references how he would prefer to write verses more like Common and Talib Kweli who are towards the upper end of the distribution for [vocabulary](https://pudding.cool/projects/vocabulary/index.html), yet feels compelled to trade moral victory for monetary success.
+
+One natural question to ask is how much did Jay Z simplify his lyrics over his career.  
+
+The first step we need to take to answer this question is data! The [genius package](https://github.com/JosiahParry/genius) in R provides an easy way to access lyrics from genius.com. For this analysis we are only going to use Jay Z's solo studio albums. 
+
+```{r message = FALSE, warning = FALSE}
+library(gganimate)
+library(genius)
+library(tidyverse)
+library(tidytext)
+library(png)
+library(gifski)
+jayz.albums <- tribble(
+       ~artist, ~album, ~Year,
+       "Jay-z", "Reasonable-Doubt","1996",
+       "Jay-z", "In My Lifetime, Vol. 1","1997",
+       "Jay-z", "Vol. 2... Hard Knock Life","1998",
+       "Jay-z", "Vol. 3... Life and Times of S. Carter","1999",
+       "Jay-z", "The Dynasty: Roc La Familia","2000",
+       "Jay-z", "The Blueprint","2001",
+       "Jay-z", "The-blueprint-2-the-gift-the-curse", "2002",
+       "Jay-z", "The Black Album", "2003",
+       "Jay-z", "Kingdom Come","2006",
+       "Jay-z", "American Gangster","2007",
+       "Jay-z", "The Blueprint 3","2009",
+       "Jay-z", "Magna Carta... Holy Grail","2013",
+       "Jay-z", "4:44","2017",
+) 
+
+
+
+jayz.albums.filled <- jayz.albums %>%
+        add_genius(artist, album, "album")
+
+
+jayz.albums.filled$album <- if_else(jayz.albums.filled$album == "The-blueprint-2-the-gift-the-curse", "The Blueprint 2 The Gift The Curse",jayz.albums.filled$album)
+jayz.albums.filled$album <- if_else(jayz.albums.filled$album == "Reasonable-Doubt", "Reasonable Doubt",jayz.albums.filled$album)
+jayz.disc.tidy <- jayz.albums.filled %>% 
+        unnest_tokens(word, lyric) %>% 
+        anti_join(stop_words) 
+```
+
+##  Findings
+
+### Lexical Diversity
+
+One metric we could use to evaluate how much Jay Z simplified his lyrics is lexical diversity, which is the number of unique words (per album). The plot below shows the number of unique words per album declines over time particularly after The Black Album in which Jay Z expresses his desire to simplify his lyrics.
+
+```{r}
+diversity <- jayz.disc.tidy %>% 
+        group_by(Year, album) %>%
+        summarise(count = n_distinct(word)) %>%
+        ungroup() %>% 
+        mutate(album = fct_reorder(album, Year)) %>% 
+        ggplot(aes(album, count, group = 1)) +
+        geom_point() +
+        geom_line() +
+        geom_vline(xintercept = 8, linetype = "dotted", color = "blue") +
+        ylim(0,3000) +
+        labs(y = "# of Distinct Words", x = "Album") +
+        theme(axis.text.x = element_text(angle = 45, hjust = 1))
+diversity <- diversity + transition_reveal(as.numeric(album)) +
+        geom_line(aes(x = album, y = count,
+                       group = 1)) 
+animate(diversity, renderer = gifski_renderer())
+```
+
+
+### Lexical Density 
+
+Another metric we could is lexical density, which is the number of unique words (per album) divided by the number of words (per album). The plot below indicates that across albums, lexical density does not appear to vary nearly as much across albums as lexical diversity. Taken together with the plot above, this suggests that the number of distinct words varies with the total # of words per album.    
+
+```{r}
+density <-  jayz.disc.tidy %>% 
+        group_by(Year,album) %>% 
+        summarise(rate = n_distinct(word)/n()) %>%
+        ungroup() %>% 
+        mutate(album = fct_reorder(album, Year)) %>% 
+        ggplot(aes(album, rate, group = 1)) +
+        geom_point() +
+        geom_line() +
+        geom_vline(xintercept = 8, linetype = "dotted", color = "blue") +
+        ylim(0,1) +
+        labs(y = "Rate of Distinct Words", x = "Album") +
+        theme(axis.text.x = element_text(angle = 45, hjust = 1))
+density <- density + transition_reveal(as.numeric(album)) +
+        geom_line(aes(x = album, y = rate,
+                      group = 1)) 
+animate(density)
+```
+
+
+And we can see more directly below that Jay Z also decreased the overall number of words per album as his career progressed.
+
+```{r}
+length <- jayz.disc.tidy %>% 
+        group_by(Year,album) %>% 
+        summarise(n = n()) %>% 
+        ungroup() %>% 
+        mutate(album = fct_reorder(album, Year)) %>% 
+        ggplot(aes(album, n, group = 1)) +
+        geom_point() +
+        geom_line() +
+        geom_vline(xintercept = 8, linetype = "dotted", color = "blue") +
+        ylim(0,7000) +
+        labs(y = "Number of Words", x = "Album") +
+        theme(axis.text.x = element_text(angle = 45, hjust = 1))
+length <- length + transition_reveal(as.numeric(album)) +
+        geom_line(aes(x = album, y = n, group = 1)) 
+animate(length)
+```
+
+## Conclusion 
+
+Jay Z reduced both the number of distinct words per album as well as number of words overall per album after releasing the track Moment Clarity on The Black Album. Although, this does not necessarily mean that Jay Z simplified his topics or reduced the range of topics in his lyrics, rather he could be using simpler terms to describe equally complex topics throughout his discography.    
+
