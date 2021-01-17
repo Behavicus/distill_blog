@@ -57,13 +57,15 @@ jayz.albums <- tribble(
 ) 
 
 
-
 jayz.albums.filled <- jayz.albums %>%
         add_genius(artist, album, "album")
 
+jayz.albums.filled <- jayz.albums.filled %>% 
+  mutate(album = case_when(
+    album == "The-blueprint-2-the-gift-the-curse" ~ "The Blueprint 2 The Gift The Curse",
+    album ==  "Reasonable-Doubt" ~ "Reasonable Doubt",
+    TRUE ~ album))
 
-jayz.albums.filled$album <- if_else(jayz.albums.filled$album == "The-blueprint-2-the-gift-the-curse", "The Blueprint 2 The Gift The Curse",jayz.albums.filled$album)
-jayz.albums.filled$album <- if_else(jayz.albums.filled$album == "Reasonable-Doubt", "Reasonable Doubt",jayz.albums.filled$album)
 jayz.disc.tidy <- jayz.albums.filled %>% 
         unnest_tokens(word, lyric) %>% 
         anti_join(stop_words) 

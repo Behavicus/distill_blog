@@ -11,13 +11,20 @@ output:
     self_contained: false
 ---
 
+From climate change to COVID-19 policy makers are looking to behavioral science to solve some of societies’ largest challenges. There are certainly a number of ways behavioral science can be used to help solve these problems. For example, helping policy makers decide which interventions are the most effective at [increasing hand-washing](https://docs.google.com/document/d/1pkO9kEgDqD07UP93zBZbZz5354rSYWVJy_mH_i7D7TM/edit) or reducing energy consumption. Importantly, behavioral science is primarily meant to augment and improve existing policies, technology, and infrastructure, not replace them. Below I outline two cases that you can’t  behavioral science your way out of. 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
+#### COVID-19
 
-Distill is a publication format for scientific and technical writing, native to the web.
+Since the start of the outbreak experts have resoundingly said that a key behavior to stemming the spread of the coronavirus is [hand washing](https://www.cdc.gov/coronavirus/2019-ncov/prepare/prevention.html). As mentioned above, how to increase hand washing has been topic behavioral scientists have been studying for some time. One neat example depicted below illustrates how painting a walkway that leads to a hand washing station [increased the number of students washing their hands](https://www.mdpi.com/1660-4601/13/1/129) from 4% to 74%. 
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+![](/post/2020-03-21-things-you-can-t-behavioral-science-your-way-out-of_files/nudge_handwashing.png)
 
+However, even with such shockingly large effects, the efficacy of hand washing nudges pale in comparison to the efficacy of a vaccine or the medical infrastructure Korea has built to enable quick and efficient testing. This isn’t to say that behavioral science shouldn’t be used to reduce the spread of the virus, rather it should be used to sharpen existing efforts. In the UK, the government delayed social distancing measures based on the dubious idea of [behavioral fatigue](https://www.theguardian.com/commentisfree/2020/mar/16/social-distancing-coronavirus-stay-home-government). Even if we could precisely measure when people would get tired of social distancing, this would still not be a substitute for a vaccine or good medical infrastructure.
 
+#### Climate Change
+
+As hand washing is to reducing the spread of COVID-19, making people ask for plastic straws is to climate change. The central idea behind making people asking for plastic straws (never mind banning them) is that people are unlikely to go out of their way to purposefully ask for them (friction costs), thus reducing the overall use of plastic straw and leading to reduced carbon emissions. An entirely more effective policy at reducing carbon emissions would be to develop policies that foster the growth of alternative energy technologies. It’s also curious as a society that the one policy we’ve decided is “extremely” important to prevent climate change is a policy that forces people with disabilities to spill their drinks on themselves and prevent them from participating in public life at large. 
+
+#### Conclusion 
+
+It's inspiring how quickly behavioral scientists around the world have [deftly pivoted](https://www.scientificamerican.com/article/near-real-time-studies-look-for-behavioral-measures-vital-to-stopping-coronavirus/) to studying COVID-19 and the associated behavioral issues that spread its transmission. However, it’s also incumbent upon behavioral scientists to ensure that policy makers understand the evidence base of behavioral science and its limits. 

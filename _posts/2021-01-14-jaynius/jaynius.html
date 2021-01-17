@@ -1515,13 +1515,15 @@ But I did 5 mill’ – I ain’t been rhyming like Common since (Whoo)</p>
 <span class='op'>)</span> 
 
 
-
 <span class='va'>jayz.albums.filled</span> <span class='op'>&lt;-</span> <span class='va'>jayz.albums</span> <span class='op'>%&gt;%</span>
         <span class='fu'><a href='https://rdrr.io/pkg/genius/man/add_genius.html'>add_genius</a></span><span class='op'>(</span><span class='va'>artist</span>, <span class='va'>album</span>, <span class='st'>"album"</span><span class='op'>)</span>
 
+<span class='va'>jayz.albums.filled</span> <span class='op'>&lt;-</span> <span class='va'>jayz.albums.filled</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>mutate</span><span class='op'>(</span>album <span class='op'>=</span> <span class='fu'>case_when</span><span class='op'>(</span>
+    <span class='va'>album</span> <span class='op'>==</span> <span class='st'>"The-blueprint-2-the-gift-the-curse"</span> <span class='op'>~</span> <span class='st'>"The Blueprint 2 The Gift The Curse"</span>,
+    <span class='va'>album</span> <span class='op'>==</span>  <span class='st'>"Reasonable-Doubt"</span> <span class='op'>~</span> <span class='st'>"Reasonable Doubt"</span>,
+    <span class='cn'>TRUE</span> <span class='op'>~</span> <span class='va'>album</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='va'>jayz.albums.filled</span><span class='op'>$</span><span class='va'>album</span> <span class='op'>&lt;-</span> <span class='fu'>if_else</span><span class='op'>(</span><span class='va'>jayz.albums.filled</span><span class='op'>$</span><span class='va'>album</span> <span class='op'>==</span> <span class='st'>"The-blueprint-2-the-gift-the-curse"</span>, <span class='st'>"The Blueprint 2 The Gift The Curse"</span>,<span class='va'>jayz.albums.filled</span><span class='op'>$</span><span class='va'>album</span><span class='op'>)</span>
-<span class='va'>jayz.albums.filled</span><span class='op'>$</span><span class='va'>album</span> <span class='op'>&lt;-</span> <span class='fu'>if_else</span><span class='op'>(</span><span class='va'>jayz.albums.filled</span><span class='op'>$</span><span class='va'>album</span> <span class='op'>==</span> <span class='st'>"Reasonable-Doubt"</span>, <span class='st'>"Reasonable Doubt"</span>,<span class='va'>jayz.albums.filled</span><span class='op'>$</span><span class='va'>album</span><span class='op'>)</span>
 <span class='va'>jayz.disc.tidy</span> <span class='op'>&lt;-</span> <span class='va'>jayz.albums.filled</span> <span class='op'>%&gt;%</span> 
         <span class='fu'><a href='https://rdrr.io/pkg/tidytext/man/unnest_tokens.html'>unnest_tokens</a></span><span class='op'>(</span><span class='va'>word</span>, <span class='va'>lyric</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
         <span class='fu'>anti_join</span><span class='op'>(</span><span class='va'>stop_words</span><span class='op'>)</span> 
