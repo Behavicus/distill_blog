@@ -5,11 +5,12 @@ description: |
 author:
   - name: Evan Fradkin
     url: https://example.com/norajones
-date: 01-17-2021
+date: 03-23-2020
 output:
   distill::distill_article:
     self_contained: false
 ---
+#### Introduction
 
 From climate change to COVID-19 policy makers are looking to behavioral science to solve some of societies’ largest challenges. There are certainly a number of ways behavioral science can be used to help solve these problems. For example, helping policy makers decide which interventions are the most effective at [increasing hand-washing](https://docs.google.com/document/d/1pkO9kEgDqD07UP93zBZbZz5354rSYWVJy_mH_i7D7TM/edit) or reducing energy consumption. Importantly, behavioral science is primarily meant to augment and improve existing policies, technology, and infrastructure, not replace them. Below I outline two cases that you can’t  behavioral science your way out of. 
 
