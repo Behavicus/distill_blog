@@ -1,7 +1,7 @@
 ---
 title: "Things You Can't Behavioral Science Your Way Out Of"
 description: |
-  A short description of the post.
+  Behavioral science should augment policy, not replace it, particularly when it comes to things like COVID-19 and Climate Change.
 author:
   - name: Evan Fradkin
     url: https://example.com/norajones
@@ -17,7 +17,7 @@ From climate change to COVID-19 policy makers are looking to behavioral science 
 
 Since the start of the outbreak experts have resoundingly said that a key behavior to stemming the spread of the coronavirus is [hand washing](https://www.cdc.gov/coronavirus/2019-ncov/prepare/prevention.html). As mentioned above, how to increase hand washing has been topic behavioral scientists have been studying for some time. One neat example depicted below illustrates how painting a walkway that leads to a hand washing station [increased the number of students washing their hands](https://www.mdpi.com/1660-4601/13/1/129) from 4% to 74%. 
 
-![](/post/2020-03-21-things-you-can-t-behavioral-science-your-way-out-of_files/nudge_handwashing.png)
+![](nudge_handwashing_1.png)
 
 However, even with such shockingly large effects, the efficacy of hand washing nudges pale in comparison to the efficacy of a vaccine or the medical infrastructure Korea has built to enable quick and efficient testing. This isn’t to say that behavioral science shouldn’t be used to reduce the spread of the virus, rather it should be used to sharpen existing efforts. In the UK, the government delayed social distancing measures based on the dubious idea of [behavioral fatigue](https://www.theguardian.com/commentisfree/2020/mar/16/social-distancing-coronavirus-stay-home-government). Even if we could precisely measure when people would get tired of social distancing, this would still not be a substitute for a vaccine or good medical infrastructure.
 
