@@ -1,7 +1,7 @@
 ---
 title: "The Design of Traffic Calming Measures: A Running List"
 description: |
-  A short description of the post.
+  
 author:
   - name: Evan Fradkin
     url: https://example.com/norajones
