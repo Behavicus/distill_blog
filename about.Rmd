@@ -8,4 +8,4 @@ description: |
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-I work at Babylon Health as a product analyst on experimentation and tracking. Previously, I was 
+I am a behavioral scientist working at Babylon Health on experimentation and tracking. Previously, I was a PhD student at Warwick Business School where I did research on judgement and decision making, specifically how people make decisions over time and from experience. I use this blog to write about behavioral science, data science, and design. 
