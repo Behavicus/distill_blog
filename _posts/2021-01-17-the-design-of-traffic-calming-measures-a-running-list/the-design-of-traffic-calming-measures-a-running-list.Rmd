@@ -2,7 +2,6 @@
 title: "The Design of Traffic Calming Measures: A Running List"
 description: |
 "A collection of traffic calming measures I've come across"
-  
 author:
   - name: Evan Fradkin
     url: https://example.com/norajones

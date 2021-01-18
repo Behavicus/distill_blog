@@ -1,5 +1,5 @@
 ---
-title: "About this blog"
+title: "About me"
 description: |
   Some additional details about the blog
 ---
@@ -7,3 +7,5 @@ description: |
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+I am a behavioral scientist working at Babylon Health on experimentation and tracking. Previously, I was a PhD student at Warwick Business School where I did research on judgement and decision making, specifically how people make decisions over time and from experience. I use this blog to write about behavioral science, data science, and design. 
