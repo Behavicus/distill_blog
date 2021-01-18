@@ -2,18 +2,18 @@
   "articles": [
     {
       "path": "about.html",
-      "title": "About this blog",
+      "title": "About me",
       "description": "Some additional details about the blog",
       "author": [],
-      "contents": "\n\n\n\n",
-      "last_modified": "2021-01-17T17:04:37-05:00"
+      "contents": "\nI work at Babylon Health as a product analyst on experimentation and tracking. Previously, I was\n\n\n\n",
+      "last_modified": "2021-01-18T00:00:54-05:00"
     },
     {
       "path": "index.html",
       "title": "Evan Fradkin Blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-01-17T17:04:38-05:00"
+      "last_modified": "2021-01-18T00:00:54-05:00"
     }
   ],
   "collections": ["posts/posts.json"]

@@ -1,5 +1,5 @@
 ---
-title: "About this blog"
+title: "About me"
 description: |
   Some additional details about the blog
 ---
@@ -7,3 +7,5 @@ description: |
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+I work at Babylon Health as a product analyst on experimentation and tracking. Previously, I was 
