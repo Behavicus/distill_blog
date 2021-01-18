@@ -1,0 +1,17 @@
+---
+title: "Evan Fradkin"
+image: "evan.jpg"
+links:
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/evanfradkin/"
+  - label: Twitter
+    url: "https://twitter.com/EvanFradkin"
+  - label: GitHub
+    url: "https://github.com/Evan-Fradkin"
+#  - label: Email
+#   url: "mailto:email@email.com"
+output:
+  postcards::jolla
+---
+
+I am a behavioral scientist working at Babylon Health on experimentation and tracking. Previously, I was a PhD student at Warwick Business School where I did research on how people make decisions over time and from experience. I use this blog to write about behavioral science, data science, and design. 
