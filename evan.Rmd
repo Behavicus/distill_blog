@@ -14,8 +14,4 @@ output:
   postcards::jolla
 ---
 
-I am a behavioral science working at Babylon Health on experimentation and tracking. Previously I was PhD researcher at Warwick Business School where I
- 
-I am a classically trained data scientist living in the San Francisco Bay Area. 
-Currently I work on the Oculus team at Facebook. I love talking about baseball, 
-true crime podcasts, and causal inference.
+I am a behavioral scientist working at Babylon Health on experimentation and tracking. Previously, I was a PhD student at Warwick Business School where I did research on how people make decisions over time and from experience. I use this blog to write about behavioral science, data science, and design. 
