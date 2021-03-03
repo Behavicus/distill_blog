@@ -6,21 +6,21 @@
       "description": "Some additional details about the blog",
       "author": [],
       "contents": "\nI am a behavioral scientist working at Babylon Health on experimentation and tracking. Previously, I was a PhD student at Warwick Business School where I did research on judgement and decision making, specifically how people make decisions over time and from experience. I use this blog to write about behavioral science, data science, and design.\n\n\n\n",
-      "last_modified": "2021-01-18T16:41:25-05:00"
+      "last_modified": "2021-03-02T19:38:43-05:00"
     },
     {
       "path": "evan.html",
-      "title": "Evan Fradkin",
+      "title": "Evan Fradkin, PhD",
       "author": [],
-      "contents": "\n\n          \n      \n      Evan Fradkin Blog\n      \n      \n      Home\n      About me\n      ☰\n      \n      \n      \n        \n          \n            Evan Fradkin\n          \n          \n            \n              I am a behavioral scientist working at Babylon Health on experimentation and tracking. Previously, I was a PhD student at Warwick Business School where I did research on how people make decisions over time and from experience. I use this blog to write about behavioral science, data science, and design.\n            \n            \n              I am a behavioral scientist working at Babylon Health on experimentation and tracking. Previously, I was a PhD student at Warwick Business School where I did research on how people make decisions over time and from experience. I use this blog to write about behavioral science, data science, and design.\n            \n          \n\n          \n            \n              \n                  \n                    \n                      LinkedIn\n                    \n                  \n                \n                                \n                  \n                    \n                      Twitter\n                    \n                  \n                \n                                \n                  \n                    \n                      GitHub\n                    \n                  \n                \n                              \n          \n\n          \n            \n              \n                                \n                  \n                    LinkedIn\n                  \n                \n                                \n                  \n                    Twitter\n                  \n                \n                                \n                  \n                    GitHub\n                  \n                \n                              \n            \n          \n        \n      \n    \n\n    \n    \n    ",
-      "last_modified": "2021-01-18T16:41:25-05:00"
+      "contents": "\n\n          \n          \n          Evan Fradkin\n          \n          \n          Home\n          About me\n          ☰\n          \n          \n      \n        \n          \n            Evan Fradkin, PhD\n          \n          \n            \n              I am a behavioral scientist and I use this blog to write about behavioral science, data science, and design.\n            \n            \n              I am a behavioral scientist and I use this blog to write about behavioral science, data science, and design.\n            \n          \n\n          \n            \n              \n                  \n                    \n                      LinkedIn\n                    \n                  \n                \n                                \n                  \n                    \n                      Twitter\n                    \n                  \n                \n                                \n                  \n                    \n                      GitHub\n                    \n                  \n                \n                              \n          \n\n          \n            \n              \n                                \n                  \n                    LinkedIn\n                  \n                \n                                \n                  \n                    Twitter\n                  \n                \n                                \n                  \n                    GitHub\n                  \n                \n                              \n            \n          \n        \n      \n    \n\n    \n    \n    ",
+      "last_modified": "2021-03-02T19:48:05-05:00"
     },
     {
       "path": "index.html",
       "title": "Posts",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-01-18T16:43:57-05:00"
+      "last_modified": "2021-03-02T19:38:43-05:00"
     }
   ],
   "collections": ["posts/posts.json"]
