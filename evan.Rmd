@@ -1,5 +1,5 @@
 ---
-title: "Evan Fradkin"
+title: "Evan Fradkin, PhD"
 image: "evan.jpg"
 links:
   - label: LinkedIn
@@ -14,4 +14,4 @@ output:
   postcards::jolla
 ---
 
-I am a behavioral scientist working at Babylon Health on experimentation and tracking. Previously, I was a PhD student at Warwick Business School where I studied how people make decisions over time and from experience. I use this blog to write about behavioral science, data science, and design. 
+I am a behavioral scientist and I use this blog to write about behavioral science, data science, and design. 
