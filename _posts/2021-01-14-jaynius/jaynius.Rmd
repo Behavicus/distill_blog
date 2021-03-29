@@ -143,5 +143,5 @@ animate(length)
 
 ## Conclusion 
 
-Jay Z reduced both the number of distinct words per album as well as number of words overall per album after releasing the track Moment Clarity on The Black Album. Although, this does not necessarily mean that Jay Z simplified his topics or reduced the range of topics in his lyrics, rather he could be using simpler terms to describe equally complex topics throughout his discography.    
+Jay Z reduced both the number of distinct words per album as well as number of words overall per album after releasing the track Moment of Clarity on The Black Album. Although, this does not necessarily mean that Jay Z simplified his topics or reduced the range of topics in his lyrics, rather he could be using simpler terms to describe equally complex topics throughout his discography.    
 
